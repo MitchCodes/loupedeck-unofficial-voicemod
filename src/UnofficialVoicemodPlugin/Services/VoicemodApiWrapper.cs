@@ -16,7 +16,7 @@
         private const String ServerUrl = "ws://localhost:{0}/v1/";
         private static HashSet<int> Ports = new HashSet<int>() { 59129, 20000, 39273, 42152, 43782, 46667, 35679, 37170, 38501, 33952, 30546 };
         private static int LastValidPort = 59129;
-        private const String ClientKey = "";
+        private static String ClientKey = "";
         private static ClientWebSocket _webSocket;
         private static readonly SemaphoreSlim WebSocketLock = new SemaphoreSlim(1, 1);
         // Dictionary to store messages with their received timestamp
@@ -32,6 +32,18 @@
 
         public VoicemodApiWrapper()
         {
+            
+        }
+
+        public static async Task Initialize(string clientKey)
+        {
+            if (String.IsNullOrEmpty(clientKey))
+            {
+                PluginLog.Error("Missing client key");
+            }
+
+            ClientKey = clientKey;
+
             StartMessageProcessing();
 
             InitializeWebSocket();
