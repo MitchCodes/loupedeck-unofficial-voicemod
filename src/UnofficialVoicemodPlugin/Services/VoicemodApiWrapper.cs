@@ -168,14 +168,6 @@
 
             var giveUpTime = DateTime.Now.Add(timeout);
 
-            //https://control-api.voicemod.net/api-reference/#pub-getbackgroundeffectstatus-operation
-            //https://loupedeck.github.io/Marketplace-Approval-Guidelines/
-            //chatgpt
-            //look for 'voiceChangedEvent' in the response and remove it from dictionary if it exists
-            // or just dont even confirm it.. just let it go
-            // also, make sure TImeoutexception doesn't bubble up to the actual command/adjustment, causes whole plugin to crasha nd be disabled
-            // if plugin crashes like that, needs to be reenabled in settings for debugging and it to work
-
             while (DateTime.Now < giveUpTime)
             {
                 if (_responseDictionary.TryRemove(id, out var response))
