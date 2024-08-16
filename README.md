@@ -14,8 +14,8 @@ This plugin is rough around the edges but gets the job done for the most basic s
 1. Download the latest release from the releases page (.lplug4 file).
 2. Double click the lplug4 file and the Loupedeck software should open and install the plugin.
 3. Get a client key for the Voicemod Control API from the Voicemod developer page: https://control-api.voicemod.net/getting-started
-4. Make sure the %USERPROFILE%\.loupedeck\UnofficialVoicemod folder is created. The plugin will create this file for you the first time you install if you want to skip this step.
-5. Enter your client key into the %USERPROFILE%\.loupedeck\UnofficialVoicemod\clientKey.txt file and save it.
+4. Make sure the %USERPROFILE%\\.loupedeck\UnofficialVoicemod folder is created. The plugin will create this file for you the first time you install if you want to skip this step.
+5. Enter your client key into the %USERPROFILE%\\.loupedeck\UnofficialVoicemod\clientKey.txt file and save it.
 6. Restart Loupedeck software completely (need to exit Loupedeck2.exe from task manager) or restart the computer and the plugin should be configured correctly. Sorry about this annoying step! Definitely a big potential for improvement to make it easier. Luckily, you only need to do this once.
 
 ## Developer Installation
